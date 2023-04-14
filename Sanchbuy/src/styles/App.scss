@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
+@import "~bootstrap/scss/bootstrap";
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+h1 {
+  font-family: 'Lobster';
+}
+
+h2 {
+  font-family: 'Pacifico', cursive;
+}
+
+h3 {
+  font-family: 'Kaushan Script', cursive;
+}
+
+p {
+  font-family: 'Open Sans Condensed', sans-serif;
+}

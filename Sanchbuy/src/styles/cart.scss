@@ -1,0 +1,14 @@
+// Estilos para el carrito de compras
+$color-primario: #161a1d;
+$color-secundario: #151213;
+@import "~bootstrap/scss/bootstrap";
+.card {
+    width: 100%;
+  }
+.card h1{
+    text-align: center;  
+}
+.card p{
+    text-align: center;
+}
+  

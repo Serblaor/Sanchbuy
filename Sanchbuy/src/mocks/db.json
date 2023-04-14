@@ -1,0 +1,183 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "nombre": "Café americano",
+      "descripcion": "Café negro sin leche ni azúcar",
+      "precio": 2.5,
+      "foto": "https://www.informador.mx/__export/1633130501030/sites/elinformador/img/2021/10/01/cafe_3_crop1633129558679.jpg_1970638775.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Café con leche",
+      "descripcion": "Café con leche y azúcar",
+      "precio": 3.5,
+      "foto": "https://images.pexels.com/photos/2638019/pexels-photo-2638019.jpeg",
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "nombre": "Capuchino",
+      "descripcion": "Café con leche y crema batida",
+      "precio": 4,
+      "foto": "https://images.pexels.com/photos/2128109/pexels-photo-2128109.jpeg?cs=srgb&dl=pexels-g%C3%BCl-i%C5%9F%C4%B1k-2128109.jpg&fm=jpg",
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "nombre": "Té",
+      "descripcion": "Té negro o verde",
+      "precio": 2,
+      "foto": "https://www.divinacocina.es/wp-content/uploads/2013/11/te-a-la-menta.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "nombre": "Jugo de naranja",
+      "descripcion": "Jugo natural de naranja",
+      "precio": 3,
+      "foto": "https://static8.depositphotos.com/1361307/921/i/450/depositphotos_9213995-stock-photo-orange-juice.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "nombre": "Bagel con queso crema",
+      "descripcion": "Bagel tostado con queso crema",
+      "precio": 4.5,
+      "foto": "https://us.123rf.com/450wm/rez_art/rez_art1203/rez_art120300060/12925182-bagel-y-queso-crema-y-salm%C3%B3n-ahumado.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "nombre": "Croissant de jamón y queso",
+      "descripcion": "Croissant relleno de jamón y queso",
+      "precio": 5,
+      "foto": "https://bk-latam-prod.s3.amazonaws.com/sites/burgerking.latam/files/product_detail_croissant_jamonqueso.png",
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "nombre": "Ensalada César",
+      "descripcion": "Lechuga, pollo, crutones, queso parmesano y aderezo César",
+      "precio": 6.5,
+      "foto": "https://www.goodnes.com/sites/g/files/jgfbjl321/files/srh_recipes/755f697272cbcdc6e5df2adb44b1b705.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 9,
+      "nombre": "Sándwich de pavo",
+      "descripcion": "Pan integral, pavo, queso, lechuga, tomate y mostaza",
+      "precio": 7,
+      "foto": "https://n9z4u8f2.rocketcdn.me/wp-content/uploads/2019/12/Sandwich-de-pavo04.jpg",
+      "quantity": 1
+    }
+  ],
+  "users": [
+    {
+      "id": "abcd123",
+      "nombre": "sergio",
+      "email": "dontulon@gmail.com",
+      "password": "1234567"
+    }
+  ],
+  "checkout": [
+    {
+      "empployeeId": "abc123",
+      "products": [
+        {
+          "pId": "xyz987",
+          "quantity": 5
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "nombre": "Café americano",
+      "descripcion": "Café negro sin leche ni azúcar",
+      "precio": 2.5,
+      "foto": "https://via.placeholder.com/150",
+      "quantity": 1
+    },
+    {
+      "empployeeId": "abc123",
+      "products": [
+        {
+          "pId": "xyz987",
+          "quantity": 5
+        }
+      ],
+      "id": 2
+    },
+    {
+      "empployeeId": "abc123",
+      "products": [
+        {
+          "pId": "xyz987",
+          "quantity": 5
+        }
+      ],
+      "id": 3
+    },
+    {
+      "empployeeId": "abcd123",
+      "products": [
+        {
+          "pId": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 4
+    },
+    {
+      "empployeeId": "abcd123",
+      "products": [
+        {
+          "pId": 2,
+          "quantity": 1
+        }
+      ],
+      "id": 5
+    },
+    {
+      "empployeeId": "abcd123",
+      "products": [
+        {
+          "pId": 1,
+          "quantity": 1
+        }
+      ],
+      "id": 6
+    },
+    {
+      "empployeeId": "abcd123",
+      "products": [
+        {
+          "pId": 3,
+          "quantity": 1
+        }
+      ],
+      "id": 7
+    },
+    {
+      "empployeeId": "abcd123",
+      "products": [
+        {
+          "pId": 3,
+          "quantity": 1
+        }
+      ],
+      "id": 8
+    },
+    {
+      "empployeeId": "abcd123",
+      "products": [
+        {
+          "pId": 4,
+          "quantity": 1
+        }
+      ],
+      "id": 9
+    }
+  ]
+}

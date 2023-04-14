@@ -1,0 +1,33 @@
+.favorites-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .favorites-title {
+    text-align: center;
+  }
+    .favorites-p {
+    text-align: center;
+  }
+  
+  .favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .favorites-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 250px;
+    height: 350px;
+  }
+  
+  .remove-button {
+    margin-top: 10px;
+    text-align: center;
+  }
+  

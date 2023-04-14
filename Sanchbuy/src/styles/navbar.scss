@@ -1,0 +1,116 @@
+
+
+// Variables
+$color-white: #ffffff;
+$color-black: #000;
+$color-primary: #692a2a;
+$color-secondary: #6c757d;
+$color-success: #28a745;
+$color-danger: #dc3545;
+$color-warning: #ffc107;
+$color-info: #17a2b8;
+
+// // Navbar
+// .navbar {
+//   background-color: $color-white;
+//   border-bottom: 1px solid $color-secondary;
+//   padding: 10px 0;
+  
+   
+//   .container {
+//     display: flex;
+    
+//     align-items: center;
+//     width: 100%;
+//     justify-content: space-between;
+//     .navbar-brand {
+//         display: flex;
+//       font-size: 24px;
+//       font-weight: bold;
+//       text-transform: uppercase;
+//     }
+//     .navbar-logo{
+//         text-decoration: none;
+//         color: $color-black;
+        
+//     }
+//     .navbar-toggler {
+//       border: none;
+      
+//       background-color: none;
+//       font-size: 24px;
+//       padding: 0;
+//       &:hover {
+//         cursor: pointer;
+//       }
+//     }
+//     .navbar-nav {
+//       display: flex;
+      
+//       align-items: center;
+//       .nav-item {
+//         display: flex;
+//         flex-direction: row;
+//         margin-right: 70px;
+//         a {
+//           text-decoration: none;
+//           color: $color-black;
+//           &:hover {
+//             color: $color-primary;
+//           }
+//         }
+//         .badge {
+//           background-color: $color-primary;
+//           color: $color-white;
+//           font-size: 16px;
+//           padding: 5px 5px;
+//           border-radius: 50%;
+//           position: relative;
+//           top: -4px;
+//           left: 5px;
+//         }
+//         .dropdown {
+//           position: relative;
+//           .dropdown-menu {
+//             position: absolute;
+//             top: 30px;
+//             right: 0;
+//             z-index: 1;
+//           }
+//         }
+//         form {
+//           margin: 0;
+//           .input-group {
+//             margin: 0;
+//             input {
+//               border: none;
+//               border-radius: 20px;
+//               padding: 8px 16px;
+//               width: 200px;
+//               &:focus {
+//                 outline: none;
+//               }
+//             }
+//             button {
+//               border: none;
+//               border-radius: 20px;
+//               padding: 8px 16px;
+//               background-color: $color-secondary;
+//               color: $color-white;
+//               &:hover {
+//                 background-color: $color-primary;
+//                 cursor: pointer;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+@import "~bootstrap/scss/bootstrap";
+i {
+    font-size: 2.5rem;
+}
+
+
