@@ -6,7 +6,7 @@ Esta es una aplicación web de compras online construida con React y Redux. Tamb
 ### Instalar dependencias `npm install`
 
 ### Iniciar json-server
-json-server --watch db.json --port 3001
+json-server --watch db.json --routes routes.json  --port 3001
 
 
 ### Iniciar la aplicación
