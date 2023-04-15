@@ -22,7 +22,7 @@ const Favorites = () => {
         {favorites.length === 0 && <p className='favorites-p'>No hay productos en favoritos.</p>}
         {favorites.map(product => (
 
-          <div clasName="favorites-card" key={product.id}>
+          <div className="favorites-card" key={product.id}>
             <Product
               product={product}
               showFavoriteButton={false}
