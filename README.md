@@ -6,6 +6,8 @@ Esta es una aplicación web de compras online construida con React y Redux. Tamb
 ### Instalar dependencias `npm install`
 
 ### Iniciar json-server
+
+debe estar en la carpeta \sanbuy\src\mocks>
 json-server --watch db.json --routes routes.json  --port 3001
 
 
@@ -18,7 +20,9 @@ La aplicación incluye los siguientes scripts:
 ### npm start
 Inicia la aplicación en modo de desarrollo en el puerto 3000.
 ### Credenciales
+
 email: dontulon@gmail.com
+
 password: 1234567
 
 ###  npm run build
