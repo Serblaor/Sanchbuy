@@ -5,6 +5,7 @@ import { Card, Button } from 'react-bootstrap';
 import '../styles/cart.scss'
 import NavBar from './Navbar';
 import axios from 'axios';
+import swal from 'sweetalert';
 
 const Cart = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -13,14 +14,20 @@ const Cart = () => {
   const dispatch = useDispatch();
 
   const handleRemoveItemClick = (item) => {
-    dispatch(removeFromCart(item));
+    dispatch(removeFromCart(item.id));
   };
+
   const handlecomprar = async (item) => {
+    if (!user) {
+      swal("Oops...", "Debes estar logueado para comprar productos", "error");
+      return;
+    }
+
     const enviar = await axios.post(`http://localhost:3001/api/checkout`, {
       empployeeId: user.id, products:
         [{ pId: item.id, quantity: item.quantity }]
-    })
-    console.log(enviar)
+    });
+    swal("Compra realizada", "Gracias por su compra", "success");
   }
 
   const total = cartItems.reduce((acc, curr) => {
@@ -33,23 +40,23 @@ const Cart = () => {
   return (
     <>
       <NavBar />
-      <div className='card'>
+      <div className='cardDR'>
         <h1>Carrito de compras</h1>
         {cartItems.length === 0 ? (
           <p>No hay productos en el carrito</p>
         ) : (
-          <div >
+          <div className='cardD'>
             <Card>
               {cartItems.map((item) => (
                 <div key={item.id}>
-                  <Card.Img variant="top" src={item.foto} alt="" />
+                  <Card.Img className="imgD" variant="top" src={item.foto} alt={item.nombre} />
                   <Card.Body>
                     <Card.Title>{item.nombre}</Card.Title>
                     <Card.Text>{item.descripcion}</Card.Text>
-                    <Card.Text>Precio: {item.precio}</Card.Text>
+                    <Card.Text>Precio: $ {item.precio}</Card.Text>
                     <Card.Text>Cantidad: {item.quantity}</Card.Text>
-                    <Button onClick={() => handleRemoveItemClick(item)}>Quitar</Button>
-                    <Button onClick={() => handlecomprar(item)}>Comprar</Button>
+                    <Button className='bu' onClick={() => handleRemoveItemClick(item)}>Quitar</Button>
+                    <Button className='bu' onClick={() => handlecomprar(item)}>Comprar</Button>
                   </Card.Body>
                 </div>
               ))}
@@ -62,6 +69,6 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Cart
 
 

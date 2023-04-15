@@ -10,25 +10,28 @@ const initialState = {
 export const cartReducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_PRODUCT_TO_CART:
-      const index = state.cartItems.findIndex(
-        (x) => x.id === action.payload.id
-      );
-      if (index !== -1) {
-        state.cartItems[index].quantity =
-          state.cartItems[index].quantity + action.payload.quantity;
-        return {
-          ...state,
-          cartItems: [...state.cartItems],
-        };
-      }
-      return {
-        ...state,
-        cartItems: [...state.cartItems, action.payload],
-      };
+  const existingItemIndex = state.cartItems.findIndex(
+    (x) => x.id === action.payload.id
+  );
+  if (existingItemIndex !== -1) {
+    const updatedCartItems = [...state.cartItems];
+    updatedCartItems[existingItemIndex] = {
+      ...updatedCartItems[existingItemIndex],
+      quantity: updatedCartItems[existingItemIndex].quantity + action.payload.quantity
+    };
+    return {
+      ...state,
+      cartItems: updatedCartItems
+    };
+  }
+  return {
+    ...state,
+    cartItems: [...state.cartItems, action.payload],
+  };
     case REMOVE_PRODUCT_FROM_CART:
       return {
         ...state,
-        cartItems: state.cartItems.filter((x) => x.producto !== action.payload),
+        cartItems: state.cartItems.filter((x) => x.id !== action.payload),
       };
     default:
       return state;

@@ -2,13 +2,34 @@
 $color-primario: #161a1d;
 $color-secundario: #151213;
 @import "~bootstrap/scss/bootstrap";
-.card {
+.cardDR {
     width: 100%;
   }
-.card h1{
+.cardDR h1{
     text-align: center;  
 }
-.card p{
+.cardDR p{
     text-align: center;
 }
+.cardD{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    height: 30%;
+}
+.cardD .img{
+    align-items: center;
+    width: 250px;
+    height: 350px;
+}
+.bu {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-left: 2rem;
+  }
+  
   
