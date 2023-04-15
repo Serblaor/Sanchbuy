@@ -14,20 +14,21 @@ const Favorites = () => {
 
   return (
     <div>
-      <div>
+      <div className='a'>
         <Navbar />
       </div>
       <div className='favorites-container'>
         <h2 className='favorites-title'>Favoritos</h2>
         {favorites.length === 0 && <p className='favorites-p'>No hay productos en favoritos.</p>}
         {favorites.map(product => (
-
-          <div className="favorites-card" key={product.id}>
-            <Product
-              product={product}
-              showFavoriteButton={false}
-            />
-            <button className='remove-button' onClick={() => handleRemove(product.id)}>Remover de favoritos</button>
+          <div className='container-card-favorito' key={product.id}>
+            <div className="favorites-card">
+              <Product
+                product={product}
+                showFavoriteButton={false}
+              />
+              <button className='remove-button-favorito' onClick={() => handleRemove(product.id)}>Remover de favoritos</button>
+            </div>
           </div>
         ))}
       </div>
@@ -36,5 +37,6 @@ const Favorites = () => {
 }
 
 export default Favorites;
+
 
 

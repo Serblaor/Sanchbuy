@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeFromCart } from '../actions/cartActions';
+import { removeFromCart, clearCart } from '../actions/cartActions';
 import { Card, Button } from 'react-bootstrap';
 import '../styles/cart.scss'
 import NavBar from './Navbar';
@@ -22,13 +22,19 @@ const Cart = () => {
       swal("Oops...", "Debes estar logueado para comprar productos", "error");
       return;
     }
-
-    const enviar = await axios.post(`http://localhost:3001/api/checkout`, {
-      empployeeId: user.id, products:
-        [{ pId: item.id, quantity: item.quantity }]
-    });
-    swal("Compra realizada", "Gracias por su compra", "success");
-  }
+  
+    try {
+      const enviar = await axios.post(`http://localhost:3001/api/checkout`, {
+        empployeeId: user.id, products:
+          [{ pId: item.id, quantity: item.quantity }]
+      });
+      swal("Compra realizada", "Gracias por su compra", "success");
+      dispatch(clearCart()); // Limpia el carrito después de la compra exitosa
+    } catch (error) {
+      console.log(error);
+    }
+  };
+  
 
   const total = cartItems.reduce((acc, curr) => {
     if (curr.product) {
@@ -48,7 +54,7 @@ const Cart = () => {
           <div className='cardD'>
             <Card>
               {cartItems.map((item) => (
-                <div key={item.id}>
+                <div className='cardb' key={item.id}>
                   <Card.Img className="imgD" variant="top" src={item.foto} alt={item.nombre} />
                   <Card.Body>
                     <Card.Title>{item.nombre}</Card.Title>

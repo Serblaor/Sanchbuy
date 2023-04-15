@@ -1,11 +1,3 @@
-// export const searchP = (searchTerm, lista) => {
-//     let copialista = lista.slice()
-//     if (searchTerm){
-//         copialista = lista.filter(x => x.nombre.toLowerCase().includes(searchTerm.toLowerCase()) )
-//     } 
-//     return copialista
-// }
-
 export const searchP = (searchTerm, lista) => {
     let copialista = lista.slice();
     if (searchTerm) {
