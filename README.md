@@ -17,6 +17,9 @@ La aplicación incluye los siguientes scripts:
 
 ### npm start
 Inicia la aplicación en modo de desarrollo en el puerto 3000.
+### Credenciales
+email: dontulon@gmail.com
+password: 1234567
 
 ###  npm run build
 Compila la aplicación para producción en la carpeta build.
